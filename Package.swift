@@ -7,7 +7,7 @@ let package = Package(
     name: "test_server",
     dependencies: [
         // Dependencies declare other packages that this package depends on.
-        .package(url: "https://github.com/sgubler/SG90Servo.swift.git", from: "2.0.0"),
+        .package(url: "https://github.com/sgubler/SwiftyGPIO.git", from: "1.0.0"),
         .package(url: "https://github.com/httpswift/swifter.git", .upToNextMajor(from: "1.4.0"))
     ],
     targets: [
@@ -15,6 +15,6 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
             name: "test_server",
-            dependencies: ["Swifter","SG90Servo"]),
+            dependencies: ["Swifter", "SwiftyGPIO"]),
     ]
 )
